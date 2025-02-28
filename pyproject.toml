@@ -1,0 +1,25 @@
+[project]
+name = "babo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ben Datko", email = "8881506+bdatko@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.1.8",
+    "plumbum>=1.9.0",
+]
+
+[project.scripts]
+babo = "babo.cli:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipython>=8.32.0",
+]
