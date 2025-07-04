@@ -18,3 +18,18 @@ Options:
 Commands:
   install  Install packages for dev-env
 ```
+
+# How I intend to use this...
+
+0. Install `homebrew` using the `install` script within [`.dotfiles`](https://github.com/bdatko/.dotfiles)
+1. Install [`uv`](https://docs.astral.sh/uv/getting-started/installation/)
+2. Use `uv` to install this repo as tool using:
+```
+uv tool install git+https://github.com/bdatko/babo.git
+```
+3. `git clone https://github.com/bdatko/.dotfiles`
+4. Use `stow` to stow dotfiles. You might have to remove `~/.zshrc` that `uv` added.
+5. Use `babo` to install software using:
+```
+babo install --target-dir ~/.local/share/install-scripts/
+```
