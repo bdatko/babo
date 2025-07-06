@@ -27,9 +27,14 @@ Commands:
 ```
 uv tool install git+https://github.com/bdatko/babo.git
 ```
-3. `git clone https://github.com/bdatko/.dotfiles`
-4. Use `stow` to stow dotfiles. You might have to remove `~/.zshrc` that `uv` added.
-5. Use `babo` to install software using:
+3. Next clone our `.dotfiels` from `git clone https://github.com/bdatko/.dotfiles`
+4. Since our `.dotfiles` has our `nvim` config as a submodule so we need init submodules:
+```
+git submodule init
+git submodule update
+```
+5. Use `stow` to stow dotfiles. You might have to remove `~/.zshrc` that `uv` added.
+6. Use `babo` to install software using:
 ```
 babo install --target-dir ~/.local/share/install-scripts/
 ```
